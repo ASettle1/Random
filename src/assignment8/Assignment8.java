@@ -5,13 +5,29 @@ import java.util.Scanner;
 
 public class Assignment8 {
     
+    public static boolean repeat = true;
     public static int weekCounter = 0;
     public static Scanner scan = new Scanner(System.in);
+    PayCalculation pay = new PayCalculation();
+    public int[] values = new int[4];
     
     public static void main(String[] args) {
-        //int num = validInt("Enter a number", 10, 99);
-        //double num = validDouble("Enter a number", 10.00, 99.99);
-        //System.out.println("Num value: " + num);
+        System.out.println("Would you like to calculate your pay for a week? Press Y (Yes) or N (No).");
+        while(repeat){
+                String input = scan.next();
+                input = input.toUpperCase();
+                switch (input) {
+                    case "Y":
+                        repeat = false;
+                        break;
+                    case "N":
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Please enter Y (Yes) to continue or N (No) to quit.");
+                        break;
+                }
+        }
     }
     
     public static int validInt(String prompt, int lowerBound, int upperBound){
