@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Aaron Settle
  */
 public class Assignment8 {
-
+    
     public static double totalGrossPay = 0;
     public static double totalNetPay = 0;
     public static boolean repeat = true;
@@ -79,6 +79,10 @@ public class Assignment8 {
     }
 
     public static int validInt(String prompt, int lowerBound, int upperBound) {
+        /** Valid Int
+         *@return   validInt compares the input read by the scanner to the bounds set by lowerBound and upperBound.
+         *          If not valid, the user is prompted to enter another value until a valid value is entered.
+         */
         for (;;) {
             System.out.printf("%s (%d-%d)\n", prompt, lowerBound, upperBound);
             try {
@@ -96,6 +100,10 @@ public class Assignment8 {
     }
 
     public static double validDouble(String prompt, double lowerBound, double upperBound) {
+        /** Valid Double
+         *@return   validDouble compares the input read by the scanner to the bounds set by lowerBound and upperBound.
+         *          If not valid, the user is prompted to enter another double until a valid value is entered.
+         */
         for (;;) {
             System.out.printf("%s (%.2f-%.2f)\n", prompt, lowerBound, upperBound);
             try {
@@ -113,6 +121,10 @@ public class Assignment8 {
     }
 
     public static void barGraph(int numWeeks) {
+        /** Bar Graph
+         *@return   barGraph prints the amount of asterisks corresponding with the value of weekCounter.
+         *          Ex) User enters 3 weeks of values, weekCounter is 3, and barGraph prints 3 asterisks.
+         */
         String stars = "";
         for (int i = 1; i < numWeeks; i++) {
             stars += "*";
